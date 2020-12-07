@@ -43,8 +43,8 @@ module Day6 =
             |> List.fold (+) ""
             |> Seq.toList
             |> List.fold handleAnswer Map.empty
-        let filteredMap = answerMap |> Map.filter (fun a b -> b = personCount)
-        filteredMap.Count
+            |> Map.filter (fun _ b -> b = personCount)
+        answerMap.Count
 
     // Solve Advent of Code 2020, day 6, part 2
     let solvePart2 (log: ILogger) (input: string) =
